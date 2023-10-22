@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_form.css">
+    <title>login form</title>
+</head>
+<body>
+    <div class="container">
+        //signup form
+        <div class="logon-wrap  active">
+            <div class="title">
+                <h1>login</h1>
+            </div>
+            <form action="recup_element.php" method="post">
+                <div class="input-area">
+                    <input type="email" id="email" autocomplete="off" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+                
+                <div class="input-area">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">password</label>
+                </div>
+
+               <!-- <div class="mot">
+                    <a href="#" class="mot">Forgot password</a>
+                </div>-->
+                <span id="error" class="error" > </span>
+                <div class="button-area">
+                    <button class="login-btn" onclick="Envoyer()">Login</button>
+                </div>
+
+                <div class="for-toggle-area">
+                    <p>Pas de compte?  <span id="toggle-signup">S'inscrire</span></p>
+                </div>
+            </form>
+        </div>
+//login form
+        <div class="signup-wrap">
+            <div class="title">
+                <h1>Signup</h1>
+            </div>
+            <form action="recup_element.php" method="post">
+                <div class="input-area">
+                    <input type="text" id="nom1" autocomplete="off" name="nom" required>
+                    <label for="nom">Mom</label>
+                </div>
+
+                <div class="input-area">
+                    <input type="email" id="email1" autocomplete="off" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+                
+                <div class="input-area">
+                    <input type="password" id="password1" name="password" required >
+                    <label for="password">password</label>
+                </div>
+
+                <span id="error1" ></span>
+                <div class="button-area">
+                    <button class="Signup-btn" onclick="Connection()" >Signup</button>
+                </div>
+
+                <div class="for-toggle-area">
+                    <p> <span id="toggle-login">Connéction</span></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
