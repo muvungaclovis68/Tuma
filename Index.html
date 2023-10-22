@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tuma_Service</title>
+</head>
+<body>
+<section class="header-section">
+    <div class="contenue">
+        <header class="navbar">
+            <div class="logo">
+                <img src="Image/Tuma (2).png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">A bout</a></li>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="main.html">Sing up</a></li>
+                </ul>
+                <img src="Image/location-black.png" alt="">
+            </nav>
+        </header>
+
+        <div class="row">
+            <div class="col-2">
+                <h1><span> T</span>uma <span> S</span>ervice</h1>
+                <p>Faites vos livraisons des colis avec nous  </p>
+                <a href="#">Tuma Nos Service &#8594;</a>
+            </div>
+            <div class="col-2">
+                 <img src="Image/Travel-Agency.jpg" alt="">
+            </div>
+        </div>
+</section>
+
+<!--section categories-->
+    <section class="categories">
+        <div class="contenue">
+            <h2> <span>B</span>on <span>D</span>e <span>L</span>ivraison </h2>
+            <P>livraisons colis et devis direct</P>
+        <div class="mon_form">
+            <form action="recup_element.php" method="post">
+
+                <div >
+                    <label for="">Nom colies</label><br>
+                    <input type="text" id="nom" name="nom" required >
+                    
+                </div>
+                <div >
+                    <label for="">Contact</label><br>
+                    <input type="number" id="contact" name="contact" required >
+                    
+                </div>
+
+                <div >
+                    <label for="Départ">Depart</label><br>
+                    <select name="depart" id="depart" class="option">
+                        <option value="Goma">Goma</option>
+                        <option value="Butembo">Butembo</option>
+                        <option value="Kinshasa">Kinshasa</option>
+                        <option value="Kisangani">Kisangani</option>
+                        <option value="Lubumbashi">Lubumbashi</option>
+                    </select>
+                </div>
+
+                <div >
+                    <label for="">Destination</label><br>
+                    <select name="destination" id="destination" class="option">
+                        <option value="Goma">Goma</option>
+                        <option value="Butembo">Butembo</option>
+                        <option value="Kinshasa">Kinshasa</option>
+                        <option value="Kisangani">Kisangani</option>
+                        <option value="Lubumbashi">Lubumbashi</option>
+                    </select>
+                </div>
+                <div >
+                    <label for="">Poids</label><br>
+                    <input type="number" id="poids" name="poids" required >
+                    
+                </div>
+                
+                <div >
+                    <label for="">Date d'envoi</label><br>
+                    <input type="date" id="date" name="date" required >
+                    
+                </div>
+
+                <span id="error1" ></span>
+                <div class="button-area">
+                    <button  class="Signup-btn"  onclick="calculPrix()" >Obtenir un devis</button>
+                </div>
+                
+
+
+                
+            </form>
+        </div>
+    
+            </div>
+        </div>
+    </section>
+    <section class="resultat" >
+        <div class="contenue">
+            <h2> <span>D</span>evis</h2>
+            <P>Voici les devis de votre livraison</P>
+        <div class="mon_form" id="">
+            <form action="">
+                <textarea name="result" id="result" cols="30" rows="5"></textarea><br>
+                <textarea name="detail" id="detail" cols="30" rows="5"></textarea>
+                
+                <button class="button1" id="submit"> Modifier</button>
+                <button class="button2" onclick="suprimer()">Suprimer</button>
+            </form>
+
+        </div>
+        </div>
+
+    </section>
+
+
+    <section class="footer">
+        <div class="contenue">
+           
+            <div class="row">
+                <p class="p_footer">Tuma Service pour nous tous\    by: clovis muvunga</p>
+            </div>
+        </div>
+
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
